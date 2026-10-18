@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" fill="none">
+  <title>IbexFlow canvas preview</title>
+  <desc>Placeholder screenshot: a mind map with a root node, four branches, two child notes and the command palette open.</desc>
+
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#eef0f4" stroke-width="1" fill="none" />
+    </pattern>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- canvas -->
+  <rect width="1280" height="800" fill="#fcfcfd" />
+  <rect width="1280" height="800" fill="url(#grid)" />
+
+  <!-- connectors -->
+  <g stroke="#c4b5fd" stroke-width="1.5" fill="none">
+    <path d="M280 392C400 392 416 150 536 150" />
+    <path d="M280 392C400 392 416 290 536 290" />
+    <path d="M280 392C400 392 416 430 536 430" />
+    <path d="M280 392C400 392 416 570 536 570" />
+    <path d="M768 290C800 290 808 262 840 262" />
+    <path d="M768 290C800 290 808 318 840 318" />
+  </g>
+
+  <!-- root node -->
+  <g filter="url(#soft)">
+    <rect x="72" y="356" width="208" height="72" rx="14" fill="#ffffff" stroke="#7e22ce" stroke-width="1.5" />
+  </g>
+  <circle cx="116" cy="392" r="4" fill="#7e22ce" />
+  <text x="130" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="17" font-weight="600" fill="#1e293b">IbexFlow</text>
+
+  <!-- branch nodes -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="14" font-weight="500">
+    <rect x="536" y="124" width="232" height="52" rx="10" fill="#faf5ff" stroke="#7e22ce" stroke-width="1.5" />
+    <circle cx="560" cy="150" r="3.5" fill="#7e22ce" />
+    <text x="576" y="155" fill="#4c1d95">Keyboard First</text>
+
+    <rect x="536" y="264" width="232" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" />
+    <circle cx="560" cy="290" r="3.5" fill="#d8b4fe" />
+    <text x="576" y="295" fill="#334155">Local Files</text>
+
+    <rect x="536" y="404" width="232" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" />
+    <circle cx="560" cy="430" r="3.5" fill="#d8b4fe" />
+    <text x="576" y="435" fill="#334155">Rust Core</text>
+
+    <rect x="536" y="544" width="232" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" />
+    <circle cx="560" cy="570" r="3.5" fill="#d8b4fe" />
+    <text x="576" y="575" fill="#334155">Visual Canvas</text>
+  </g>
+
+  <!-- child notes -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#475569">
+    <rect x="840" y="242" width="148" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.25" />
+    <text x="858" y="267">ideas.ibex</text>
+    <rect x="840" y="298" width="148" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.25" />
+    <text x="858" y="323">attachments/</text>
+  </g>
+
+  <!-- command palette -->
+  <g filter="url(#soft)">
+    <rect x="900" y="440" width="300" height="240" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.25" />
+  </g>
+  <rect x="916" y="458" width="268" height="34" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.25" />
+  <text x="930" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="12" fill="#94a3b8">&#8984;K&#160;&#160;Type a command&#8230;</text>
+  <rect x="916" y="504" width="268" height="30" rx="6" fill="#faf5ff" />
+  <circle cx="930" cy="519" r="4" fill="#7e22ce" />
+  <text x="944" y="524" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#6b21a8">New child node</text>
+  <text x="1170" y="524" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="11" fill="#a78bfa">&#8984;N</text>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="12" fill="#64748b">
+    <text x="944" y="562">Link to node</text>
+    <text x="1170" y="562" text-anchor="end" font-size="11" fill="#94a3b8">&#8984;L</text>
+    <text x="944" y="596">Focus mode</text>
+    <text x="1170" y="596" text-anchor="end" font-size="11" fill="#94a3b8">&#8984;&#8679;F</text>
+    <text x="944" y="630">Export Markdown</text>
+    <text x="1170" y="630" text-anchor="end" font-size="11" fill="#94a3b8">&#8984;E</text>
+  </g>
+
+  <!-- status pill -->
+  <rect x="72" y="700" width="330" height="40" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.25" />
+  <circle cx="96" cy="720" r="3.5" fill="#22c55e" />
+  <text x="110" y="724" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="12" fill="#64748b">Saved locally &#183; 12 nodes &#183; 0 cloud calls</text>
+</svg>
