@@ -154,26 +154,15 @@ function Hero() {
           </div>
         </div>
 
-        {/* product screenshot in a macOS-style window */}
+        {/* raw screenshot — the app's own native title bar is part of the capture */}
         <figure className="mx-auto mt-14 max-w-5xl sm:mt-16">
-          <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg">
-            <div className="relative flex items-center gap-2 border-b border-gray-200 bg-gray-50 px-4 py-3">
-              <span aria-hidden="true" className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-              <span aria-hidden="true" className="h-3 w-3 rounded-full bg-[#febc2e]" />
-              <span aria-hidden="true" className="h-3 w-3 rounded-full bg-[#28c840]" />
-              <span className="pointer-events-none absolute inset-x-0 hidden text-center text-xs font-medium text-slate-500 sm:block">
-                IbexFlow — Roadmap
-              </span>
-            </div>
-
-            <img
-              src="/screenshot-placeholder.svg"
-              width={1280}
-              height={800}
-              alt="IbexFlow window showing a mind map with a root node, four branches and the command palette open"
-              className="block w-full"
-            />
-          </div>
+          <img
+            src="/hero.png"
+            width={1804}
+            height={1360}
+            alt="IbexFlow window showing a mind map with a root node, four branches and the command palette open"
+            className="block h-auto w-full rounded-xl border border-gray-200 shadow-lg"
+          />
           <figcaption className="mt-4 text-center text-xs text-slate-400">
             Preview from an early build — the final screenshot ships with v1.0.
           </figcaption>
