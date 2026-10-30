@@ -4,6 +4,20 @@
 @config "../tailwind.config.js";
 
 /* ------------------------------------------------------------------ *
+ * Design tokens — IbexFlow's muted, low-saturation palette.
+ * Warm paper canvas, basalt-charcoal ink, ash-mauve node accents and
+ * a whisper of terracotta. No saturated SaaS gradients anywhere.
+ * ------------------------------------------------------------------ */
+@theme {
+  --color-paper: #f9f8f6; /* warm off-white page canvas */
+  --color-basalt: #27272a; /* deep charcoal ink */
+  --color-mauve: #8a6f86; /* ash purple — node borders, icon accents */
+  --color-mauve-ink: #6f5769; /* deeper mauve for small text (AA on paper) */
+  --color-mauve-soft: #ece5ea; /* mauve wash — selection, tints */
+  --color-terracotta: #b0785f; /* warm accent, used sparingly */
+}
+
+/* ------------------------------------------------------------------ *
  * Base layer — light, paper-like surface that matches the app.
  * ------------------------------------------------------------------ */
 @layer base {
@@ -11,19 +25,21 @@
     color-scheme: light;
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    /* paper behind the body too, so overscroll never flashes pure white */
+    @apply bg-paper;
   }
 
   body {
-    @apply bg-slate-50 font-sans text-slate-800 antialiased;
+    @apply bg-paper font-sans text-zinc-700 antialiased;
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    @apply bg-purple-100 text-purple-900;
+    @apply bg-mauve-soft text-basalt;
   }
 
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-purple-600;
+    @apply outline-2 outline-offset-2 outline-mauve;
   }
 
   h1,
@@ -35,7 +51,7 @@
   /* quiet light scrollbars */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #d1d5db transparent;
+    scrollbar-color: #d6d3d1 transparent;
   }
 
   ::-webkit-scrollbar {
@@ -48,13 +64,13 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #d1d5db;
+    background-color: #d6d3d1;
     background-clip: content-box;
     border: 3px solid transparent;
     border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #9ca3af;
+    background-color: #a8a29e;
   }
 }

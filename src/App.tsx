@@ -2,8 +2,9 @@ import type { ReactNode } from 'react'
 
 /* ---------------------------------------------------------------------------
  * IbexFlow — single page product site.
- * Light, academic aesthetic matching the desktop app: slate-50 paper,
- * deep purple accents, white cards, generous whitespace.
+ * Muted, academic aesthetic matching the desktop app: warm paper canvas
+ * (#f9f8f6), basalt-charcoal ink (#27272a), ash-mauve node accents,
+ * white cards with hairline stone borders, generous whitespace.
  * Layout: Hero · Features · Footer.
  * ------------------------------------------------------------------------- */
 
@@ -102,27 +103,27 @@ const FEATURES: Feature[] = [
 function Hero() {
   return (
     <header className="relative isolate overflow-hidden">
-      {/* very soft brand tint, barely there */}
+      {/* very soft mauve tint, barely there */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(60%_55%_at_50%_0%,rgba(126,34,206,0.07),transparent)]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(60%_55%_at_50%_0%,rgba(138,111,134,0.05),transparent)]"
       />
 
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-medium text-slate-600 shadow-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-xs font-medium text-zinc-600 shadow-sm">
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-500 opacity-60" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-purple-600" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mauve opacity-40" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-mauve" />
             </span>
             In review — coming soon to macOS
           </span>
 
-          <h1 className="mt-8 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
-            Ibex<span className="text-purple-700">Flow</span>
+          <h1 className="mt-8 text-5xl font-bold tracking-tight text-basalt sm:text-6xl lg:text-7xl">
+            IbexFlow
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-pretty text-slate-600 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-pretty text-zinc-600 sm:text-xl">
             A Tactical, Ultra-Fast Desktop Mind-Mapping Tool for Visual Thinkers.
           </p>
 
@@ -131,7 +132,7 @@ function Hero() {
               href="https://ibexforge.lemonsqueezy.com/checkout/buy/29810212-923e-4a69-8309-a8b710413c7a"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-purple-200 bg-purple-50 px-6 py-3 text-sm font-semibold text-purple-700 shadow-sm transition-colors hover:bg-purple-100"
+              className="inline-flex items-center gap-2 rounded-lg bg-zinc-800 px-6 py-3 text-sm font-semibold text-stone-50 shadow-sm transition-colors hover:bg-zinc-700"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -148,7 +149,7 @@ function Hero() {
               </svg>
               Get Early Access (Free)
             </a>
-            <p className="text-xs text-slate-400">Windows Beta Available Now.</p>
+            <p className="text-xs text-zinc-500">Windows Beta Available Now.</p>
           </div>
         </div>
 
@@ -159,9 +160,9 @@ function Hero() {
             width={1804}
             height={1360}
             alt="IbexFlow window showing a mind map with a root node, four branches and the command palette open"
-            className="block h-auto w-full rounded-xl border border-gray-200 shadow-lg"
+            className="block h-auto w-full rounded-xl border border-stone-200 shadow-[0_1px_2px_rgba(39,39,42,0.04),0_24px_48px_-32px_rgba(39,39,42,0.22)]"
           />
-          <figcaption className="mt-4 text-center text-xs text-slate-400">
+          <figcaption className="mt-4 text-center text-xs text-zinc-500">
             Preview from an early build — the final screenshot ships with v1.0.
           </figcaption>
         </figure>
@@ -172,17 +173,20 @@ function Hero() {
 
 function Features() {
   return (
-    <section aria-labelledby="features-heading" className="border-t border-gray-200">
+    <section aria-labelledby="features-heading" className="border-t border-stone-200">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold tracking-[0.16em] text-purple-700 uppercase">Features</p>
+          <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.16em] text-mauve-ink uppercase">
+            <span aria-hidden="true" className="h-px w-6 bg-terracotta/70" />
+            Features
+          </p>
           <h2
             id="features-heading"
-            className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+            className="mt-3 text-2xl font-bold tracking-tight text-basalt sm:text-3xl"
           >
             Everything you need to think clearly.
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-slate-600">
+          <p className="mt-3 text-base leading-relaxed text-zinc-600">
             Three principles shaped the app: stay small, stay on the keyboard, and keep your notes on
             your own machine.
           </p>
@@ -192,21 +196,21 @@ function Features() {
           {FEATURES.map((feature) => (
             <li
               key={feature.id}
-              className="flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="flex flex-col rounded-xl border border-stone-200 bg-white p-6 shadow-[0_1px_2px_rgba(39,39,42,0.04)] transition-colors hover:border-stone-300"
             >
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-purple-100 bg-purple-50 text-purple-700">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 bg-stone-50 text-mauve">
                 {feature.icon}
               </span>
 
-              <h3 className="mt-5 text-base font-semibold text-slate-900">{feature.title}</h3>
-              <p className="mt-1 text-sm font-medium text-purple-700">{feature.tag}</p>
-              <p className="mt-3 grow text-sm leading-relaxed text-slate-600">{feature.body}</p>
+              <h3 className="mt-5 text-base font-semibold text-basalt">{feature.title}</h3>
+              <p className="mt-1 text-sm font-medium text-mauve-ink">{feature.tag}</p>
+              <p className="mt-3 grow text-sm leading-relaxed text-zinc-600">{feature.body}</p>
 
-              <ul className="mt-5 flex flex-wrap gap-2 border-t border-gray-100 pt-4">
+              <ul className="mt-5 flex flex-wrap gap-2 border-t border-stone-100 pt-4">
                 {feature.chips.map((chip) => (
                   <li
                     key={chip}
-                    className="rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600"
+                    className="rounded-md bg-stone-100 px-2 py-1 text-xs font-medium text-zinc-600"
                   >
                     {chip}
                   </li>
@@ -222,10 +226,10 @@ function Features() {
 
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer className="border-t border-stone-200">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-8 text-center sm:flex-row sm:text-left">
-        <p className="text-sm text-slate-500">© 2026 Mount Studio. Built by an Indie Hacker.</p>
-        <p className="text-xs text-slate-400">IbexFlow v0.1.0 · macOS · Windows</p>
+        <p className="text-sm text-zinc-600">© 2026 Mount Studio. Built by an Indie Hacker.</p>
+        <p className="text-xs text-zinc-500">IbexFlow v0.1.0 · macOS · Windows</p>
       </div>
     </footer>
   )
@@ -233,7 +237,7 @@ function Footer() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800">
+    <div className="min-h-screen bg-paper text-zinc-700">
       <Hero />
       <Features />
       <Footer />
