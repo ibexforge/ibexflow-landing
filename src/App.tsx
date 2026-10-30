@@ -127,11 +127,11 @@ function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3">
-            <button
-              type="button"
-              disabled
-              title="IbexFlow is still in review — downloads open at launch."
-              className="inline-flex items-center gap-2 rounded-lg border border-purple-200 bg-purple-50 px-6 py-3 text-sm font-semibold text-purple-700 shadow-sm transition-colors hover:bg-purple-100 disabled:cursor-not-allowed"
+            <a
+              href="https://ibexforge.lemonsqueezy.com/checkout/buy/29810212-923e-4a69-8309-a8b710413c7a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-purple-200 bg-purple-50 px-6 py-3 text-sm font-semibold text-purple-700 shadow-sm transition-colors hover:bg-purple-100"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -146,11 +146,9 @@ function Hero() {
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 7.5V12l3 2" />
               </svg>
-              Coming Soon
-            </button>
-            <p className="text-xs text-slate-400">
-              Currently under review · macOS first, Windows to follow
-            </p>
+              Get Early Access (Free)
+            </a>
+            <p className="text-xs text-slate-400">Windows Beta Available Now.</p>
           </div>
         </div>
 
